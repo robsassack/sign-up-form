@@ -60,6 +60,7 @@ header {
   color: white;
   position: absolute;
   bottom: 10px;
+  text-shadow: 1px 1px black;
 }
 
 .credit a {
@@ -85,6 +86,7 @@ label {
 .signup-form {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   background-color: white;
+  margin-bottom: 20px;
 }
 
 .signup-form p {
@@ -132,4 +134,37 @@ label {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.75rem;
+}
+
+.submit-button {
+  margin: 20px;
+  padding: 15px 50px;
+  font-size: 1rem;
+  background-color: #596D48;
+  color: white;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 10px;
+}
+
+.submit-button:hover {
+  background-color: #455338;
+  color: white;
+}
+
+.under-form p {
+  padding: 10px 20px;
+}
+
+.under-form a {
+  color: rgb(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+  color: #596D48;
+}
+
+.under-form {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
