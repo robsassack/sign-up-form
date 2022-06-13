@@ -29,31 +29,31 @@
         </div>
         <div class="signup-form">
             <p>Get started!</p>
-            <form action="#" class="main-form" id="main-form">
+            <form action="" class="main-form" id="main-form">
                 <div>
                     <label for="first-name">First Name</label>
-                    <input type="text" name="first-name" id="first-name">
+                    <input type="text" name="first-name" id="first-name" required="required">
                 </div>
                 <div>
                     <label for="last-name">Last Name</label>
-                    <input type="text" name="last-name" id="last-name">
+                    <input type="text" name="last-name" id="last-name" required="required">
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required="required">
                 </div>
                 <div>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone">
+                    <input type="tel" name="phone" id="phone" minlength="10" maxlength="10" required="required">
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required="required">
                     <span class="pass-matching"></span>
                 </div>
                 <div>
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <input type="password" name="confirm-password" id="confirm-password" required="required">
                 </div>
             </form>
         </div>
@@ -63,5 +63,5 @@
         </div>
     </section>
 </body>
-
+<script src="script.js"></script>
 </html>

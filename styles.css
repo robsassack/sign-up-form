@@ -124,10 +124,6 @@ label {
   outline: none;
 }
 
-input:invalid {
-  border: 2px solid red;
-}
-
 label {
   margin-bottom: 5px;
   font-weight: bold;
