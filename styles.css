@@ -1,3 +1,5 @@
+/* TODO: Set background as the image instead of inserting it as an <img> tag, then set the logo and title to be absolute, set the credit at the bottom using flexbox */
+
 @font-face {
     font-family: "Norse Bold";
     src: url("fonts/Norse-Bold.woff") format("woff");
@@ -13,8 +15,27 @@ h1 {
     font-family: "Norse Bold";
 }
 
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
 .header-title {
-    background-color: black;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    font-size: 3rem;
+}
+
+.header-title img {
+    height: 150px;
 }
 
 .header-title h1 {
@@ -22,6 +43,16 @@ h1 {
 }
 
 .header-img {
-    height: 200px;
-    width: auto;
+    height: auto;
+    width: 100%;
+}
+
+.credit {
+    color: white;
+    position: absolute;
+    bottom: 5px;
+}
+
+.credit a {
+    color: white;
 }
