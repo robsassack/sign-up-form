@@ -136,11 +136,16 @@ label {
   font-size: 0.75rem;
 }
 
+.pass-matching {
+  font-size: 0.75rem;
+  color: red;
+}
+
 .submit-button {
   margin: 20px;
   padding: 15px 50px;
   font-size: 1rem;
-  background-color: #596D48;
+  background-color: #596d48;
   color: white;
   border: none;
   font-weight: bold;
@@ -161,7 +166,7 @@ label {
   color: rgb(0, 0, 0, 0.5);
   text-decoration: none;
   font-weight: bold;
-  color: #596D48;
+  color: #596d48;
 }
 
 .under-form {
