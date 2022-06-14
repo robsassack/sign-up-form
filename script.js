@@ -24,14 +24,6 @@ phone.addEventListener("blur", () => {
   blankFormEntry(phone);
 });
 
-password.addEventListener("blur", () => {
-  blankFormEntry(password);
-});
-
-confirmPassword.addEventListener("blur", () => {
-  blankFormEntry(confirmPassword);
-});
-
 [password, confirmPassword].forEach((input) => {
   input.addEventListener("keyup", () => {
     if (password.value !== "" && confirmPassword.value !== "") {
@@ -42,6 +34,8 @@ confirmPassword.addEventListener("blur", () => {
         submit.disabled = true;
       } else {
         passMatch.innerText = "";
+        password.style.border = "1px solid rgb(0, 0, 0, 0.2)";
+        confirmPassword.style.border = "1px solid rgb(0, 0, 0, 0.2)";
         submit.disabled = false;
       }
     }
