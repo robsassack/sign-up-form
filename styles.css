@@ -107,7 +107,7 @@ label {
 }
 
 .main-form input {
-  width: 300px;
+  width: 250px;
   height: 40px;
   font-size: 1.5rem;
   padding: 10px;
@@ -168,4 +168,51 @@ label {
 .under-form {
   font-size: 1.25rem;
   margin-bottom: 20px;
+}
+
+@media (min-width:961px) {
+  html {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    height: 100%;
+  }
+
+  header {
+    width: 1000px;
+    height: 100%;
+    flex: auto;
+    align-items: normal;
+  }
+
+  .header-title {
+    margin-top: 30%;
+  }
+
+  .content-description {
+    margin: 100px 40px;
+  }
+
+  .signup-form p {
+    margin: 40px;
+  }
+
+  .main-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 40px;
+    margin-right: 300px;
+    gap: 30px;
+  }
+
+  .pass-matching {
+    position: absolute;
+  }
+
+  .under-form {
+    margin-left: 20px;
+  }
 }

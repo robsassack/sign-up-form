@@ -37,13 +37,11 @@ confirmPassword.addEventListener("blur", () => {
     if (password.value !== "" && confirmPassword.value !== "") {
       if (password.value !== confirmPassword.value) {
         passMatch.innerText = "* Passwords do not match";
-        password.style.border = "2px solid red";
-        confirmPassword.style.border = "2px solid red";
+        password.style.border = "1px solid red";
+        confirmPassword.style.border = "1px solid red";
         submit.disabled = true;
       } else {
         passMatch.innerText = "";
-        password.style.border = "1px solid rgb(0, 0, 0, 0.2)";
-        confirmPassword.style.border = "1px solid rgb(0, 0, 0, 0.2)";
         submit.disabled = false;
       }
     }
@@ -52,7 +50,7 @@ confirmPassword.addEventListener("blur", () => {
 
 function blankFormEntry(input) {
   if (input.value === "" || typeof input.value !== "string") {
-    input.style.border = "2px solid red";
+    input.style.border = "1px solid red";
   } else {
     input.style.border = "1px solid rgb(0, 0, 0, 0.2)";
   }
