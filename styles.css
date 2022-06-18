@@ -176,14 +176,13 @@ label {
   }
 
   body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     height: 100%;
   }
 
   header {
-    width: 1000px;
     height: 100%;
-    flex: auto;
     align-items: normal;
   }
 
