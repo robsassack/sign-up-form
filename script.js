@@ -8,44 +8,49 @@ const submit = document.querySelector(".submit-button");
 const passMatch = document.querySelector(".pass-matching");
 const form = document.getElementById("main-form");
 
-firstName.addEventListener("blur", () => {
-  blankFormEntry(firstName);
+firstName.addEventListener("input", () => {
+  if (firstName.value.length < 2) {
+    firstName.setCustomValidity("First name must be at least 2 characters long");
+    firstName.reportValidity();
+  } else {
+    firstName.setCustomValidity("");
+  }
 });
 
-lastName.addEventListener("blur", () => {
-  blankFormEntry(lastName);
+lastName.addEventListener("input", () => {
+  if (lastName.value.length < 2) {
+    lastName.setCustomValidity("Last name must be at least 2 characters long");
+    lastName.reportValidity();
+  } else {
+    lastName.setCustomValidity("");
+  }
 });
 
-email.addEventListener("blur", () => {
-  blankFormEntry(email);
+email.addEventListener("input", () => {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("Email is not valid");
+    email.reportValidity();
+  } else {
+    email.setCustomValidity("");
+  }
 });
 
-phone.addEventListener("blur", () => {
-  blankFormEntry(phone);
+phone.addEventListener("input", () => {
+  if (phone.validity.patternMismatch) {
+    phone.setCustomValidity("Phone number is not valid");
+    phone.reportValidity();
+  } else {
+    phone.setCustomValidity("");
+  }
 });
 
 [password, confirmPassword].forEach((input) => {
-  input.addEventListener("keyup", () => {
-    if (password.value !== "" && confirmPassword.value !== "") {
-      if (password.value !== confirmPassword.value) {
-        passMatch.innerText = "* Passwords do not match";
-        password.style.border = "1px solid red";
-        confirmPassword.style.border = "1px solid red";
-        submit.disabled = true;
-      } else {
-        passMatch.innerText = "";
-        password.style.border = "1px solid rgb(0, 0, 0, 0.2)";
-        confirmPassword.style.border = "1px solid rgb(0, 0, 0, 0.2)";
-        submit.disabled = false;
-      }
+  input.addEventListener("input", () => {
+    if (password.value !== confirmPassword.value) {
+      input.setCustomValidity("Passwords do not match");
+      input.reportValidity();
+    } else {
+      input.setCustomValidity("");
     }
   });
 });
-
-function blankFormEntry(input) {
-  if (input.value === "" || typeof input.value !== "string") {
-    input.style.border = "1px solid red";
-  } else {
-    input.style.border = "1px solid rgb(0, 0, 0, 0.2)";
-  }
-}

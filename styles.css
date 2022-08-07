@@ -137,6 +137,10 @@ label {
   color: red;
 }
 
+.error {
+  border: 1px solid red !important;
+}
+
 .submit-button {
   margin: 20px;
   padding: 15px 50px;
